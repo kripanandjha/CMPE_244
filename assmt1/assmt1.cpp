@@ -38,7 +38,7 @@ void led_on(void *p)
         while(1)
         {
 
-            //if any of the switch is pressed,  turn on the led
+            //if switch is pressed,  turn on the led
             if(((LPC_GPIO2->FIOPIN) & (0x1 << 6)))
                {
                 LPC_GPIO2->FIOPIN |= (0x1 << 7);
