@@ -1,4 +1,4 @@
-All these assmt files are part of free software framework for embedded processors.
+All these assignment files are part of free software framework for embedded processors.
 To use these assigment files in your projects, you can download the sample project
 source along with toolchain from the following link
 
