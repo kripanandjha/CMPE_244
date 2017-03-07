@@ -1,0 +1,34 @@
+/* At terminal.cpp, add the following code at the taskEntry() function */
+bool terminalTask::taskEntry()
+{
+    // ...
+
+    /// Handler for LED
+    CMD_HANDLER_FUNC(LEDHandler);
+    // adding led command handler
+    cp.addHandler(LEDHandler,  "led", "turn on/off led ");
+    // ...
+    return true;
+}
+
+
+
+
+/* ----------------------------------------------
+ * Your source file, such as "my_source.cpp"
+ * We will add our command handler function here
+ */
+#include "command_handler.hpp"
+
+CMD_HANDLER_FUNC(LEDHandler)
+{
+    output.putline("manipulating led");
+    vTaskSuspendAll ();
+    // turn on the led for 1 sec
+    LPC_GPIO2->FIOPIN |= (0x1 << 7);
+    delay_ms(1000);
+    xTaskResumeAll ();
+    vTaskDelayMs(1000);
+
+    return true;
+}
