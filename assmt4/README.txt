@@ -8,3 +8,8 @@ original eint.c exist in the project location "L2_Drivers/src/eint.c".
 
 Enable the the interrupt and call this function from main(). for more information regarding
 interrupt implementation please go through 'eint.c' code comments.
+
+
+Copy eint.c file to "L2_Drivers/src/" in your lpc1758_helloworld sample project. Copy
+assmt4_eint3.c to "L5_Application/" in your lpc1758 sample project folder and rename 
+it to main.c
